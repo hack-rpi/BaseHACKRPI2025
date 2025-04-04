@@ -42,7 +42,7 @@ export default function Timer() {
 		<div className="w-11/12 desktop:w-full 2xl:w-10/12 h-fit flex flex-col items-start ">
 			{hackathonStarted && !hackathonEnded ? <h1 className="text-4xl font-bold mb-2">SUBMISSIONS DUE: </h1> : null}
 			{hackathonEnded ? <h1 className="text-4xl font-bold mb-2">THANKS FOR JOINING US! </h1> : null}
-			<h1 className="text-4xl font-bold mb-2 font-modern">Time Until Website is Updated </h1>
+			<h1 className="text-4xl font-bold mb-2 font-modern">New Website Coming Soon: </h1>
 			<div className="flex items-center justify-between w-full mb-4">
 				<Circle bgColor="bg-hackrpi-light-purple" textColor="text-white">
 					{DeltaTime.months > 9 ? DeltaTime.months : "0" + DeltaTime.months}
