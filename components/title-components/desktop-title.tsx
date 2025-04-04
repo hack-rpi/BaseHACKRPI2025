@@ -2,7 +2,8 @@
 
 import Timer from "./timer";
 import TitleText from "./title-text";
-import InteractiveNavigationMap from "../interactive-map/interactive-map";
+import logo from "@/public/HackRPI_Logo_Yellow_Arrow.png";
+import NextImg from "next/image";
 
 export default function DesktopTitleComponent() {
 	return (
@@ -12,7 +13,7 @@ export default function DesktopTitleComponent() {
 				<Timer />
 			</div>
 			<div className="flex items-center justify-center w-1/2 h-full ">
-				<InteractiveNavigationMap />
+				<NextImg alt="HackRPI Logo" aria-label="Home Page" src={logo} className="h-full object-contain" />
 			</div>
 		</div>
 	);
