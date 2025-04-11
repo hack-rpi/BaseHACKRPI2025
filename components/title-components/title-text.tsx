@@ -7,25 +7,23 @@ export default function TitleText() {
 
 	// This kinda works, we may want to add a delay before this starts counting
 	// We may also want to make the count ease in and out
+	const [showHighlightDot, setShowHighlightDot] = useState(false);
+
 	useEffect(() => {
-		const startCounting = setTimeout(() => {
-			const target = 2025;
+		const scrollThreshold = window.innerWidth > 860 ? window.innerHeight - 110 : window.innerHeight - 370;
+		setShowHighlightDot(window.scrollY > scrollThreshold);
 
-			const interval = setInterval(() => {
-				setYear((prev) => {
-					if (prev < target) return prev + 1;
-					else {
-						clearInterval(interval);
-						return prev;
-					}
-				});
-			}, 10);
+		const handleResize = () => {
+			setShowHighlightDot(window.scrollY > scrollThreshold);
+		};
 
-			return () => clearInterval(interval);
-		}, 700);
-
-		return () => clearTimeout(startCounting);
-	}, [year]);
+		window.addEventListener("resize", handleResize);
+		window.addEventListener("scroll", handleResize);
+		return () => {
+			window.removeEventListener("resize", handleResize);
+			window.removeEventListener("scroll", handleResize);
+		};
+	}, []);
 
 	return (
 		<div className="w-full font-sans  text-left flex items-start justify-center flex-col mb-8">
@@ -46,7 +44,7 @@ export default function TitleText() {
 			</p>
 			<RegistrationButton className="text-3xl font-modern" name="Hackrpi 2024 winners" />
 			<HackRPILink			
-				href="https://www.hackrpi.com/"
+				href="https://2024.hackrpi.com/"
 				className={`text-3xl pl-2 pr-5 py-2 font-pix`}
 				target="_blank"
 				>

@@ -1,4 +1,4 @@
-# HackRPI-Website-2025
+# HackRPI-Website-2025-Demo
 
 The HackRPI Website [hackrpi.com](https://hackrpi.com) for our 2025 Hackathon at Rensselaer Polytechnic Institute
 
