@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import RegistrationButton from "@/components/themed-components/registration-link";
 import HackRPILink from "@/components/themed-components/hackrpi-link";
+import MlhBanner from "../mlh-banner/mlh-banner";
 
 export default function TitleText() {
 	const [year, setYear] = useState(1824);
@@ -40,9 +41,9 @@ export default function TitleText() {
 				</span>
 			</h2>
 			<p className={`w-full text-3xl sm:text-4xl 2xl:text-5xl mb-8`}>
-				November 15-16, <span onMouseEnter={() => setYear(1824)}>{year}</span>
+				November 15-16, 2025
 			</p>
-			<RegistrationButton className="text-3xl font-modern" name="Hackrpi 2024 winners" />
+			<RegistrationButton className="text-3xl font-modern" name="Register today!" />
 			<HackRPILink			
 				href="https://2024.hackrpi.com/"
 				className={`text-3xl pl-2 pr-5 py-2 font-pix`}
@@ -50,6 +51,7 @@ export default function TitleText() {
 				>
 				Hackrpi 2024 website
 			</HackRPILink>
+      <MlhBanner />
 		</div>
 	);
 }

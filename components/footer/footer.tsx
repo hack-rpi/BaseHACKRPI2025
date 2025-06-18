@@ -1,7 +1,7 @@
 import NextImage from "next/image";
 import logo from "@/public/HackRPI_Logo_Yellow_Arrow.png";
 import SocialLinks from "../socials-links/social-links";
-import RegistrationLink from "../themed-components/registration-link";
+import MLHCodeOfConduct from "../themed-components/MLH-code-of-conduct";
 
 export default function Footer() {
 	return (
@@ -31,8 +31,8 @@ export default function Footer() {
 						</div>
 					</div>
 					<div className="w-3/4 md:w-1/3 md:border-l-2 border-hackrpi-dark-blue h-full">
-						<div className="w-11/12 h-full flex flex-col items-start justify-around md:ml-4">
-							<RegistrationLink className="text-xl mb-4 font-pix" name="2024 winners" />
+						<div className="pl-10 w-11/12 h-full flex flex-col items-start justify-around md:ml-4">
+							<MLHCodeOfConduct className="text-xl mb-4 font-pix" />
 							<SocialLinks />
 						</div>
 					</div>
